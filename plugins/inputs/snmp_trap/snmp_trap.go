@@ -34,7 +34,6 @@ type SnmpTrap struct {
 
 	acc        telegraf.Accumulator
 	listener   *gosnmp.TrapListener
-	udp        *gosnmp.GoSNMP
 	timeFunc   func() time.Time
 	lookupFunc func(string) (snmp.MibEntry, error)
 	errCh      chan error
