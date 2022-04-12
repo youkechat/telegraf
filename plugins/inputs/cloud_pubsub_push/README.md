@@ -1,17 +1,19 @@
 # Google Cloud PubSub Push Input Plugin
 
-The Google Cloud PubSub Push listener is a service input plugin that listens for messages sent via an HTTP POST from [Google Cloud PubSub][pubsub].
-The plugin expects messages in Google's Pub/Sub JSON Format ONLY.
-The intent of the plugin is to allow Telegraf to serve as an endpoint of the Google Pub/Sub 'Push' service.
-Google's PubSub service will **only** send over HTTPS/TLS so this plugin must be behind a valid proxy or must be configured to use TLS.
+The Google Cloud PubSub Push listener is a service input plugin that listens for
+messages sent via an HTTP POST from [Google Cloud PubSub][pubsub].  The plugin
+expects messages in Google's Pub/Sub JSON Format ONLY.  The intent of the plugin
+is to allow Telegraf to serve as an endpoint of the Google Pub/Sub 'Push'
+service.  Google's PubSub service will **only** send over HTTPS/TLS so this
+plugin must be behind a valid proxy or must be configured to use TLS.
 
 Enable TLS by specifying the file names of a service TLS certificate and key.
 
-Enable mutually authenticated TLS and authorize client connections by signing certificate authority by including a list of allowed CA certificate file names in `tls_allowed_cacerts`.
+Enable mutually authenticated TLS and authorize client connections by signing
+certificate authority by including a list of allowed CA certificate file names
+in `tls_allowed_cacerts`.
 
 ## Configuration
-
-This is a sample configuration for the plugin.
 
 ```toml
 # Google Cloud Pub/Sub Push HTTP listener
@@ -69,4 +71,3 @@ This plugin assumes you have already created a PUSH subscription for a given
 PubSub topic.
 
 [pubsub]: https://cloud.google.com/pubsub
-[input data formats]: /docs/DATA_FORMATS_INPUT.md
