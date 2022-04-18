@@ -7,5 +7,8 @@
 package ipvs
 
 func (i *IPVS) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Collect virtual and real server stats from Linux IPVS
+[[inputs.ipvs]]
+  # no configuration
+`
 }

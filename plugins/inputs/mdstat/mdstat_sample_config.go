@@ -7,5 +7,10 @@
 package mdstat
 
 func (k *MdstatConf) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get kernel statistics from /proc/mdstat
+[[inputs.mdstat]]
+  ## Sets file path
+  ## If not specified, then default is /proc/mdstat
+  # file_name = "/proc/mdstat"
+`
 }

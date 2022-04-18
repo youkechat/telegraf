@@ -7,5 +7,8 @@
 package kernel
 
 func (k *Kernel) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get kernel statistics from /proc/stat
+[[inputs.kernel]]
+  # no configuration
+`
 }

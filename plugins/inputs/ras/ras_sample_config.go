@@ -8,5 +8,10 @@
 package ras
 
 func (r *Ras) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# RAS plugin exposes counter metrics for Machine Check Errors provided by RASDaemon (sqlite3 output is required).
+[[inputs.ras]]
+  ## Optional path to RASDaemon sqlite3 database.
+  ## Default: /var/lib/rasdaemon/ras-mc_event.db
+  # db_path = ""
+`
 }

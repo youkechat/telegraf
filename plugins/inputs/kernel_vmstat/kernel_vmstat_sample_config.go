@@ -7,5 +7,8 @@
 package kernel_vmstat
 
 func (k *KernelVmstat) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get kernel statistics from /proc/vmstat
+[[inputs.kernel_vmstat]]
+  # no configuration
+`
 }
