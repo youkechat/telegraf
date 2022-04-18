@@ -74,29 +74,4 @@ func (p *Prometheus) SampleConfig() string {
   #   [[inputs.prometheus.consul.query]]
   #     name = "a service name"
   #     tag = "a service tag"
-  #     url = 'http://{{if ne .ServiceAddress ""}}{{.ServiceAddress}}{{else}}{{.Address}}{{end}}:{{.ServicePort}}/{{with .ServiceMeta.metrics_path}}{{.}}{{else}}metrics{{end}}'
-  #     [inputs.prometheus.consul.query.tags]
-  #       host = "{{.Node}}"
-  
-  ## Use bearer token for authorization. ('bearer_token' takes priority)
-  # bearer_token = "/path/to/bearer/token"
-  ## OR
-  # bearer_token_string = "abc_123"
-  
-  ## HTTP Basic Authentication username and password. ('bearer_token' and
-  ## 'bearer_token_string' take priority)
-  # username = ""
-  # password = ""
-  
-  ## Specify timeout duration for slower prometheus clients (default is 3s)
-  # response_timeout = "3s"
-  
-  ## Optional TLS Config
-  # tls_ca = /path/to/cafile
-  # tls_cert = /path/to/certfile
-  # tls_key = /path/to/keyfile
-  
-  ## Use TLS but skip chain & host verification
-  # insecure_skip_verify = false
-`
-}
+  #     url = 'http://
